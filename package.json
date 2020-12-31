@@ -6,9 +6,10 @@
   "author": "David Cingolani <cingolanidavid@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "server": " yarn --cwd server start",
+    "server": "xdg-open http://localhost:4000 & yarn --cwd server start ",
     "client": "yarn --cwd react start",
-    "start": "concurrently \" ./start.sh \" \"yarn server\" \"yarn client\""
+    "test": "yarn --cwd cypress cy:open",
+    "start": "concurrently \" ./start.sh \" \"yarn server\" \"yarn client\" \"yarn test\""
   },
   "dependencies": {
     "concurrently": "^5.3.0",
